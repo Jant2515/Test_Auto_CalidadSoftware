@@ -5,6 +5,7 @@ import time;
 PATH = "src\chromedriver.exe";
 driver = webdriver.Chrome(PATH);
 driver.get("http://suministros.facturaelectronicacr.es");
+driver.maximize_window();
 print(driver.title);
 
 username = driver.find_element_by_name("txt_cedUsuario");

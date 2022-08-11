@@ -5,6 +5,7 @@ import time;
 PATH = "src\chromedriver.exe";
 driver = webdriver.Chrome(PATH);
 driver.get("http://suministros.facturaelectronicacr.es");
+driver.maximize_window();
 print(driver.title);
 
 username = driver.find_element_by_name("txt_cedUsuario");
@@ -19,7 +20,7 @@ btn_iniciar = driver.find_element_by_id("form-submit");
 btn_iniciar.click();
 time.sleep(1); 
 
-btn_addCajaResmas = driver.find_element_by_id("btn_agregarCarrito-1520,");
+btn_addCajaResmas = driver.find_element_by_id("btn_agregarCarrito-1520");
 btn_addCajaResmas.click();
 time.sleep(1); 
 
@@ -46,6 +47,6 @@ time.sleep(1);
 
 alert = driver.switch_to.alert
 alert.accept()
-time.sleep(30); 
+time.sleep(60); 
 
 driver.quit();

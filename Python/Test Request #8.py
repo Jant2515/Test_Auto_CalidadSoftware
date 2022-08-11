@@ -5,6 +5,7 @@ import time;
 PATH = "src\chromedriver.exe";
 driver = webdriver.Chrome(PATH);
 driver.get("http://suministros.facturaelectronicacr.es");
+driver.maximize_window();
 print(driver.title);
 
 username = driver.find_element_by_name("txt_cedUsuario");
@@ -19,7 +20,7 @@ btn_iniciar = driver.find_element_by_id("form-submit");
 btn_iniciar.click();
 time.sleep(1);
 
-btn_iniciar = driver.find_element_by_id("notificacion-900");
+btn_iniciar = driver.find_element_by_id("form-submit-900");
 btn_iniciar.click();
 time.sleep(30);
 
